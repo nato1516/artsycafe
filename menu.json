@@ -1,0 +1,526 @@
+{
+    "bebidasCalientes": [
+        {
+            "id": 1,
+            "nombre": "Irish Coffee",
+            "descripcion": "Café intenso, whisky y una suave capa de crema.",
+            "categoria": "COFFEE COLLECTION · 01",
+            "etiqueta": "CAFÉ ESPECIAL",
+            "precio": "₡ 2.500",
+            "tipo": "Con licor",
+            "imagen": "img/menu/irishCoffe.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Café Negro Artesanal",
+            "descripcion": "Café de origen seleccionado, preparado con métodos de extracción limpia.",
+            "categoria": "COFFEE COLLECTION · 02",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 1.800",
+            "tipo": "Café",
+            "imagen": "img/menu/negro.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Matcha Latte Caliente",
+            "descripcion": "Delicado té matcha ceremonial con leche texturizada y arte latte artesanal.",
+            "categoria": "GREEN COLLECTION · 01",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.700",
+            "tipo": "Bebida caliente",
+            "imagen": "img/menu/matchaCaliente.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Irish Coffee",
+            "descripcion": "Café intenso, whisky y una suave capa de crema.",
+            "categoria": "COFFEE COLLECTION · 03",
+            "etiqueta": "CAFÉ ESPECIAL",
+            "precio": "₡ 2.500",
+            "tipo": "Con licor",
+            "imagen": "img/menu/irishCoffe.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Café Negro Artesanal",
+            "descripcion": "Café de origen seleccionado, preparado con métodos de extracción limpia.",
+            "categoria": "COFFEE COLLECTION · 04",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 1.800",
+            "tipo": "Café",
+            "imagen": "img/menu/negro.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Café Método V60",
+            "descripcion": "Extracción por goteo manual que resalta las notas aromáticas y frutales del grano.",
+            "categoria": "COFFEE COLLECTION · 05",
+            "etiqueta": "ESPECIALIDAD",
+            "precio": "₡ 2.200",
+            "tipo": "Filtrado",
+            "imagen": "img/menu/v60.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Café Latte Clásico",
+            "descripcion": "Suave espresso combinado con leche vaporizada y una delicada capa de arte latte en taza.",
+            "categoria": "COFFEE COLLECTION · 06",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 2.300",
+            "tipo": "Café caliente",
+            "imagen": "img/menu/cafeLatte.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Café de la Ópera con Nutella",
+            "descripcion": "Exquisito café caliente servido en taza con borde decorado de crema de avellanas y chocolate.",
+            "categoria": "COFFEE COLLECTION · 07",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.800",
+            "tipo": "Café caliente",
+            "imagen": "img/menu/cafeOpera.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "Café Cappuccino Histórica",
+            "descripcion": "Espresso equilibrado con leche vaporizada y una capa de espuma cremosa con diseño de arte latte.",
+            "categoria": "COFFEE COLLECTION · 08",
+            "etiqueta": "TRADICIONAL",
+            "precio": "₡ 2.400",
+            "tipo": "Café caliente",
+            "imagen": "img/menu/cappucinoHistorioco.jpg"
+        },
+        {
+            "id": 11,
+            "nombre": "Café Filtrado Chemex",
+            "descripcion": "Extracción en cafetera Chemex que ofrece una taza sumamente limpia, aromática y delicada.",
+            "categoria": "COFFEE COLLECTION · 09",
+            "etiqueta": "ESPECIALIDAD",
+            "precio": "₡ 2.300",
+            "tipo": "Filtrado",
+            "imagen": "img/menu/chemex.jpg"
+        },
+        {
+            "id": 12,
+            "nombre": "Flat White Artesanal",
+            "descripcion": "Doble shot de espresso con una fina capa de leche vaporizada y un elaborado arte latte.",
+            "categoria": "COFFEE COLLECTION · 10",
+            "etiqueta": "ESPECIALIDAD",
+            "precio": "₡ 2.400",
+            "tipo": "Café caliente",
+            "imagen": "img/menu/flatWhite.jpg"
+        },
+        {
+            "id": 13,
+            "nombre": "Café Prensa Francesa",
+            "descripcion": "Método de infusión en prensa francesa que permite extraer los aceites esenciales y cuerpo completo del grano.",
+            "categoria": "COFFEE COLLECTION · 11",
+            "etiqueta": "ESPECIALIDAD",
+            "precio": "₡ 2.300",
+            "tipo": "Filtrado",
+            "imagen": "img/menu/cafePrensa.jpg"
+        },
+        {
+            "id": 14,
+            "nombre": "Café Vienes Tradicional",
+            "descripcion": "Exquisito café caliente coronado con abundante crema batida y finas virutas de chocolate.",
+            "categoria": "COFFEE COLLECTION · 12",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.600",
+            "tipo": "Café caliente",
+            "imagen": "img/menu/cafeVienes.jpg"
+        },
+        {
+            "id": 15,
+            "nombre": "Café Método Aeropress",
+            "descripcion": "Innovador método de extracción por presión manual que produce una taza limpia, rica en matices y cuerpo equilibrado.",
+            "categoria": "COFFEE COLLECTION · 13",
+            "etiqueta": "ESPECIALIDAD",
+            "precio": "₡ 2.400",
+            "tipo": "Filtrado",
+            "imagen": "img/menu/aeropress.jpg"
+        }
+    ],
+    "frappes": [
+        {
+            "id": 1,
+            "nombre": "Frappé de Frutos Rojos",
+            "descripcion": "Refrescante mezcla de frutos rojos, hielo frappé y un toque cremoso.",
+            "categoria": "COFFEE COLLECTION · 02",
+            "etiqueta": "BEBIDA FRÍA",
+            "precio": "₡ 2.600",
+            "tipo": "Frappé",
+            "imagen": "img/menu/frutoRojo.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Frappé de Café Tradicional",
+            "descripcion": "Espresso equilibrado con leche y hielo frappé cremoso.",
+            "categoria": "COFFEE COLLECTION · 03",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 2.400",
+            "tipo": "Frappé",
+            "imagen": "img/menu/frapecafe.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Frappé de Oreo",
+            "descripcion": "Deliciosa combinación de galleta Oreo triturada, leche y base frappé.",
+            "categoria": "COFFEE COLLECTION · 04",
+            "etiqueta": "POPULAR",
+            "precio": "₡ 2.800",
+            "tipo": "Frappé",
+            "imagen": "img/menu/frapeOreo.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Frappé Tiramisú",
+            "descripcion": "Inspirado en el clásico postre italiano con notas de café y mascarpone.",
+            "categoria": "COFFEE COLLECTION · 05",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.900",
+            "tipo": "Frappé",
+            "imagen": "img/menu/frapeTiramisu.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Frappé Lotus Biscoff",
+            "descripcion": "Cremoso frappé con el toque único y crujiente de la galleta Lotus.",
+            "categoria": "COFFEE COLLECTION · 06",
+            "etiqueta": "NOVEDAD",
+            "precio": "₡ 3.000",
+            "tipo": "Frappé",
+            "imagen": "img/menu/frapeLotus.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Frappé de Fresa Cremoso",
+            "descripcion": "Deliciosa base frappé con intenso sabor a fresa y una suave capa superior.",
+            "categoria": "COFFEE COLLECTION · 07",
+            "etiqueta": "BEBIDA FRÍA",
+            "precio": "₡ 2.700",
+            "tipo": "Frappé",
+            "imagen": "img/menu/fresaCremoso.jpg"
+        }
+    ],
+    "smoothiesYBatidos": [
+        {
+            "id": 1,
+            "nombre": "Smoothie Tropical de Maracuyá",
+            "descripcion": "Exótica y vibrante mezcla de fruta de la pasión con hielo triturado.",
+            "categoria": "TROPICAL · 01",
+            "etiqueta": "NATURAL",
+            "precio": "₡ 2.400",
+            "tipo": "Smoothie",
+            "imagen": "img/menu/tropicalMaracuaya.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Batido Cremoso de Vainilla",
+            "descripcion": "Suave batido artesanal con notas de vainilla y textura helada.",
+            "categoria": "CREAMY · 01",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 2.300",
+            "tipo": "Batido",
+            "imagen": "img/menu/cremosoVainilla.jpg"
+        }
+    ],
+    "sodasItalianas": [
+        {
+            "id": 1,
+            "nombre": "Soda Italiana Blue Lagoon",
+            "descripcion": "Refrescante bebida espumosa con jarabe azul, cítricos y hielo.",
+            "categoria": "REFRESHING · 01",
+            "etiqueta": "BEBIDA FRÍA",
+            "precio": "₡ 2.200",
+            "tipo": "Sin alcohol",
+            "imagen": "img/menu/blueLagon.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Soda de Frutos Rojos",
+            "descripcion": "Bebida carbonatada refrescante con infusión de frutos del bosque.",
+            "categoria": "REFRESHING · 02",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.300",
+            "tipo": "Sin alcohol",
+            "imagen": "img/menu/sodaFrutosR.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Limonada con Menta",
+            "descripcion": "Jugo de limón natural recién exprimido con hojas frescas de hierbabuena.",
+            "categoria": "REFRESHING · 02",
+            "etiqueta": "NATURAL",
+            "precio": "₡ 2.000",
+            "tipo": "Sin alcohol",
+            "imagen": "img/menu/limonadaMenta.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Limonada Clásica con Gas",
+            "descripcion": "Refrescante soda con jugo de limón natural recién exprimido y rodajas.",
+            "categoria": "REFRESHING · 04",
+            "etiqueta": "NATURAL",
+            "precio": "₡ 2.100",
+            "tipo": "Sin alcohol",
+            "imagen": "img/menu/clasicaLimonada.jpg"
+        }
+    ],
+    "bebidasFrias": [
+        {
+            "id": 1,
+            "nombre": "Iced Latte",
+            "descripcion": "Capa doble de espresso sobre leche fría y cubitos de hielo.",
+            "categoria": "COLD BREW · 01",
+            "etiqueta": "CAFÉ FRÍO",
+            "precio": "₡ 2.300",
+            "tipo": "Café",
+            "imagen": "img/menu/iceLatte.jpg"
+        },
+         {
+            "id": 2,
+            "nombre": "Iced Matcha Latte",
+            "descripcion": "Refrescante infusión de té matcha orgánico con leche fría y cubitos de hielo.",
+            "categoria": "GREEN COLLECTION · 02",
+            "etiqueta": "BEBIDA FRÍA",
+            "precio": "₡ 2.800",
+            "tipo": "Bebida fría",
+            "imagen": "img/menu/machaIce.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Matcha Tonic Helado",
+            "descripcion": "Vibrante mezcla de té matcha con agua tónica espumosa y hielo.",
+            "categoria": "GREEN COLLECTION · 03",
+            "etiqueta": "REFRESCANTE",
+            "precio": "₡ 2.900",
+            "tipo": "Bebida fría",
+            "imagen": "img/menu/machaTonic.jpg"
+        },
+         {
+            "id": 4,
+            "nombre": "Iced Latte de Taro",
+            "descripcion": "Cremosa y colorida combinación de espresso, leche y extracto de taro con hielo.",
+            "categoria": "SPECIALTY COLD · 01",
+            "etiqueta": "NOVEDAD",
+            "precio": "₡ 2.900",
+            "tipo": "Café frío",
+            "imagen": "img/menulatteTaro.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Iced Caramelo Macchiato",
+            "descripcion": "Refrescante café frío con capas de leche, hielo, espresso y un toque dulce de caramelo.",
+            "categoria": "COLD BREW · 02",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.700",
+            "tipo": "Café frío",
+            "imagen": "img/menu/carameloMacchiato.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Iced Moka Caramelo",
+            "descripcion": "Refrescante bebida fría de café espresso, leche y un toque de chocolate con hilos de caramelo.",
+            "categoria": "COLD BREW · 03",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 2.800",
+            "tipo": "Café frío",
+            "imagen": "img/menu/iceMoka.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Iced Matcha Latte Capas",
+            "descripcion": "Vibrante bebida fría con capas de espresso, leche y té matcha orgánico con hielo.",
+            "categoria": "GREEN COLLECTION · 04",
+            "etiqueta": "NOVEDAD",
+            "precio": "₡ 3.000",
+            "tipo": "Bebida fría",
+            "imagen": "img/menu/latteCapas.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Cold Brew Shakerato",
+            "descripcion": "Intenso café frío batido con hielo y sutiles notas aromáticas, coronado con granos de café.",
+            "categoria": "COLD BREW · 04",
+            "etiqueta": "REFRESCANTE",
+            "precio": "₡ 2.600",
+            "tipo": "Café frío",
+            "imagen": "img/menu/coldBew.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Espresso Martini de la Casa",
+            "descripcion": "Elegante cóctel frío a base de espresso, licor y una suave capa cremosa decorada con granos de café.",
+            "categoria": "SPECIALTY COLD · 02",
+            "etiqueta": "GOURMET",
+            "precio": "₡ 3.500",
+            "tipo": "Café frío",
+            "imagen": "img/menu/espressoMartini.jpg"
+        }
+    ],
+    "sandwichesYSaltados": [
+        {
+            "id": 1,
+            "nombre": "Sándwich de Panini con Ensalada",
+            "descripcion": "Pan tostado al grill relleno de jamón, queso y aderezo, acompañado de ensalada fresca.",
+            "categoria": "BAKERY & GRILL · 01",
+            "etiqueta": "COMPLEMENTO",
+            "precio": "₡ 3.500",
+            "tipo": "Salado",
+            "imagen": "img/menu/panini.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Torta Tradicional de Carnitas",
+            "descripcion": "Tradicional pan relleno de jugosa carne desmenuzada, cebolla encurtida y queso fresco.",
+            "categoria": "BAKERY & GRILL · 02",
+            "etiqueta": "FAVORITO",
+            "precio": "₡ 3.800",
+            "tipo": "Salado",
+            "imagen": "img/menu/tradicionalCarnitas.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Sándwich Artesanal de Mechada",
+            "descripcion": "Pan artesanal relleno de carne desmechada alverjada, queso fundido, tomate y lechuga fresca.",
+            "categoria": "BAKERY & GRILL · 03",
+            "etiqueta": "GOURMET",
+            "precio": "₡ 4.000",
+            "tipo": "Salado",
+            "imagen": "img/menu/carneMechada.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Hot Dog Artesanal",
+            "descripcion": "Salchicha premium en pan suave tostado, servido con aderezos especiales, chiles jalapeños y vegetales.",
+            "categoria": "BAKERY & GRILL · 04",
+            "etiqueta": "FAVORITO",
+            "precio": "₡ 3.200",
+            "tipo": "Salado",
+            "imagen": "img/menu/hotDog.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Baguette de Atún y Aceitunas",
+            "descripcion": "Pan baguette crujiente relleno de generosa crema de atún y rodajas de aceitunas verdes.",
+            "categoria": "BAKERY & GRILL · 05",
+            "etiqueta": "GOURMET",
+            "precio": "₡ 3.600",
+            "tipo": "Salado",
+            "imagen": "img/menu/atun.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Quesadillas Doradas con Refresco",
+            "descripcion": "Tortillas tostadas al sartén rellenas de sabroso guiso, acompañadas de bebida gaseosa fría.",
+            "categoria": "BAKERY & GRILL · 06",
+            "etiqueta": "FAVORITO",
+            "precio": "₡ 3.900",
+            "tipo": "Salado",
+            "imagen": "img/menu/quesadillas.jpg"
+        }
+    ],
+    "postres": [
+        {
+            "id": 1,
+            "nombre": "Milhojas Clásico",
+            "descripcion": "Capas crujientes de hojaldre con relleno cremoso y espolvoreado con azúcar glass.",
+            "categoria": "PASTRY COLLECTION · 01",
+            "etiqueta": "ARTESANAL",
+            "precio": "₡ 2.500",
+            "tipo": "Repostería",
+            "imagen": "img/menu/milHojas.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Flan de Caramelo",
+            "descripcion": "Suave y cremoso flan tradicional bañado en un dulce caramelo dorado.",
+            "categoria": "PASTRY COLLECTION · 02",
+            "etiqueta": "CLÁSICO",
+            "precio": "₡ 2.000",
+            "tipo": "Postre",
+            "imagen": "img/menu/flan.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Queque Húmedo de Chocolate",
+            "descripcion": "Intenso bizcocho de chocolate cubierto con ganache y decorado con frutos rojos.",
+            "categoria": "PASTRY COLLECTION · 03",
+            "etiqueta": "FAVORITO",
+            "precio": "₡ 2.800",
+            "tipo": "Postre",
+            "imagen": "img/menu/humedoChoco.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Cheesecake Vasqueño",
+            "descripcion": "Tarta de queso horneada de centro cremoso, acompañada de frutos rojos y salsa de chocolate.",
+            "categoria": "PASTRY COLLECTION · 04",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 3.200",
+            "tipo": "Postre",
+            "imagen": "img/menu/cheesecakeVasq.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Tres Leches en Copas",
+            "descripcion": "Bizcocho empapado en mezcla de tres leches, coronado con abundante chantilly y barquillo crujiente.",
+            "categoria": "PASTRY COLLECTION · 05",
+            "etiqueta": "DULCE",
+            "precio": "₡ 2.600",
+            "tipo": "Postre",
+            "imagen": "img/menu/tresLeches.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Sándwich de Churro con Helado",
+            "descripcion": "Crujientes churros en forma de círculo rellenos de helado artesanal, fresas frescas y salsa de caramelo.",
+            "categoria": "PASTRY COLLECTION · 06",
+            "etiqueta": "ESPECIAL",
+            "precio": "₡ 3.100",
+            "tipo": "Postre",
+            "imagen": "img/menu/sandChurro.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Tarteleta de Caramelo y Nuez",
+            "descripcion": "Base crujiente rellena de caramelo y nueces, coronada con una bola de helado y galleta dorada.",
+            "categoria": "PASTRY COLLECTION · 07",
+            "etiqueta": "GOURMET",
+            "precio": "₡ 2.900",
+            "tipo": "Postre",
+            "imagen": "img/menu/tartaletaCarameloNuez.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Brownie Volcán de Chocolate",
+            "descripcion": "Jugoso pastel de chocolate con una bola de helado y cobertura de chocolate derretido al momento.",
+            "categoria": "PASTRY COLLECTION · 08",
+            "etiqueta": "FAVORITO",
+            "precio": "₡ 2.800",
+            "tipo": "Postre",
+            "imagen": "img/menu/brownie.jpg"
+        },
+        {
+            "id": 9,
+            "nombre": "Tarta Floral de Crema y Café",
+            "descripcion": "Elegante postre en forma de flor con finas capas de crema pastelera con un toque de café.",
+            "categoria": "PASTRY COLLECTION · 09",
+            "etiqueta": "NOVEDAD",
+            "precio": "₡ 3.000",
+            "tipo": "Repostería",
+            "imagen": "img/menu/tartaFloral.jpg"
+        },
+        {
+            "id": 10,
+            "nombre": "Panna Cotta de Frutos Rojos",
+            "descripcion": "Delicada crema cocida italiana con cobertura de gelatina de frutos rojos, acompañada de crujientes de almendra y cerezas frescas.",
+            "categoria": "PASTRY COLLECTION · 10",
+            "etiqueta": "GOURMET",
+            "precio": "₡ 3.200",
+            "tipo": "Postre",
+            "imagen": "img/menu/pannaCotta.jpg"
+        }
+    ]
+}
