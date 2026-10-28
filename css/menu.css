@@ -1,0 +1,615 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+:root {
+    /* TIPOGRAFÍAS */
+    --fuenteTitulos: "DM Sans";
+    --fuenteTexto: "Lato";
+    --fuenteFrases: "Cormorant Garamond";
+    /* PALETA PRINCIPAL */
+    --Naranja: #FF795B;
+    --azul: #209e9a;
+    --Marfil: #FFF8EE;
+    --noche: #202A2C;
+
+    /* COLORES COMPLEMENTARIOS */
+    --arena: #E9E1D5;
+    --menta: #D9E8E3;
+    --dorado: #D9A441;
+    --gris: #697573;
+    --blanco: #FFFFFF;
+
+    /* TEXTOS */
+    --textoPrincipal: #202A2C;
+    --textoSecundario: #697573;
+    --textoClaro: #FFF8EE;
+    --textoEnBoton: #FFFFFF;
+
+    /* FONDOS */
+    --fondoPrincipal: #FFF8EE;
+    --fondoOscuro: #202A2C;
+    --fondoAlternativo: #E9E1D5;
+    --fondoTarjeta: #FFFFFF;
+    --fondoSuave: #D9E8E3;
+
+    /* BOTONES */
+    --botonPrincipal: #176B68;
+    --botonPrincipalTexto: #FFFFFF;
+    --botonPrincipalHover: #115451;
+
+    --botonSecundario: #FF795B;
+    --botonSecundarioTexto: #202A2C;
+    --botonSecundarioHover: #E86649;
+
+    --botonOutline: #176B68;
+    --botonOutlineTexto: #176B68;
+
+    /* NAVEGACIÓN */
+    --navback: rgba(32, 42, 44, 0.781);
+    --navTexto: #FFF8EE;
+    --navHover: #FF795B;
+
+    /* ENLACES */
+    --enlace: #176B68;
+    --enlaceHover: #E86649;
+
+    /* BORDES Y SOMBRAS */
+    --borde: #D8D0C5;
+    --bordeOscuro: rgba(255, 248, 238, 0.18);
+    --sombra: 0 8px 24px rgba(32, 42, 44, 0.10);
+
+    /* ESTADOS */
+    --exito: #287A55;
+    --advertencia: #D9A441;
+    --error: #C44545;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+section {
+    padding: 40px 0;
+    min-height: 100vh;
+}
+
+.separadorOndas {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.separadorOndas svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+============================================================================
+Fuentes
+============================================================================
+*/
+h1 {
+    font-family: var(--fuenteTitulos);
+    font-size: 60px;
+    color: var(--azul);
+    max-width: 980px;
+    margin: 0 auto;
+}
+h2 {
+    font-family: var(--fuenteTitulos);
+    font-size: 50px;
+    color: var(--azul);
+    max-width: 980px;
+}
+h3 {
+    font-family: var(--fuenteTitulos);
+    font-size: 30px;
+    color: var(--botonOutline);
+}
+h4{
+    font-family: var(--fuenteTitulos);
+}
+.pOscuro {
+    font-family: var(--fuenteTexto);
+    font-size: 18px;
+    color: var(--textoPrincipal);
+    padding: 5px 0;
+}
+.pClaro{
+    font-family: var(--fuenteTexto);
+    font-size: 19px;
+    color: var(--textoEnBoton);
+    padding: 5px 0;
+}
+.frase {
+    font-family: var(--fuenteFrases), serif;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--Naranja);
+}
+.etiqueta {
+    display: inline-block;
+    color: var(--navHover);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--navHover);
+}
+.navDirec {
+    font-family: var(--fuenteTexto);
+    font-size: 18px;
+    color: var(--Marfil);
+}
+.navDirec:hover {
+    color: var(--Naranja);
+    font-weight: bold;
+}
+/*
+========================================================
+BOTONES
+========================================================
+*/
+.btnMenu {
+    color: var(--dorado);
+    border: 2px solid var(--dorado);
+    border-radius: 5px;
+    display: flex;
+    width: 196px;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-family: var(--fuenteTexto);
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    z-index: 1;
+    margin: 30px auto 0;
+}
+.btnMenu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--dorado);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+.btnMenu:hover::before {
+    transform: scaleX(1);
+}
+.btnMenu:hover {
+    color: var(--noche);
+}
+
+/*
+========================================================
+NAV
+========================================================
+*/
+nav {
+    padding: 15px 0;
+    background: var(--navback);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--navback);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.containerNav {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 100px;
+}
+.navLink {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+}
+/*
+==================================================
+HEADER
+==================================================
+*/
+header{
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.6)),
+    url("../img/menubanner.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.containerHeader{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+/*
+========================================
+CAFE
+========================================
+*/
+.bebidasCalientesSection{
+    background-color: var(--Marfil);
+}
+.cardsCafe{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.cardCafes {
+    width: 100%;
+    max-width: 380px;
+    background: var(--fondoTarjeta);
+    border: 1px solid var(--borde);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.cardCafes:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--sombra);
+}
+
+/* IMAGEN */
+.cardCafes .imagen {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background: var(--arena);
+}
+
+.cardCafes .imagen > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.cardCafes:hover .imagen > img {
+    transform: scale(1.06);
+}
+
+/* ETIQUETA */
+.etiquetaCafe {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 8px 12px;
+    background: var(--Naranja);
+    color: var(--noche);
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* BOTÓN VER */
+.verCafe {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--botonPrincipal);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.verCafe:hover {
+    background: var(--botonPrincipalHover);
+    transform: rotate(-5deg);
+}
+
+.verCafe img {
+    width: 23px;
+    height: 23px;
+    filter: brightness(0) invert(1);
+}
+
+/* CONTENIDO */
+.textosCard {
+    padding: 24px 22px 20px;
+}
+
+.categoriaCafe {
+    margin: 0 0 10px;
+    color: var(--azul);
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.textosCard h3 {
+    margin: 0;
+    color: var(--textoPrincipal);
+    font-family: var(--fuenteTitulos);
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.descripcionCafe {
+    margin: 12px 0 22px;
+    color: var(--textoSecundario);
+    font-family: var(--fuenteTexto);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* PRECIO Y CATEGORÍA */
+.pieCard {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 16px;
+    border-top: 1px solid var(--borde);
+}
+
+.precio {
+    flex-shrink: 0;
+}
+
+.precio span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--textoSecundario);
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.precio p {
+    margin: 0;
+    color: var(--botonPrincipal);
+    font-family: var(--fuenteTitulos);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.lineaDecorativa {
+    flex: 1;
+    height: 2px;
+    background: var(--Naranja);
+}
+
+.tipoCafe {
+    color: var(--textoPrincipal);
+    background: var(--menta);
+    padding: 7px 9px;
+    font-family: var(--fuenteTexto);
+    font-size: 11px;
+    font-weight: 700;
+}
+/*
+========================================
+Emparedados
+========================================
+*/
+.emparedadoG{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+/* TARJETA DE EMPAREDADOS */
+.cardEmparedados {
+    background: var(--Marfil);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* IMAGEN */
+.imagenEmparedado {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.imagenEmparedado > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.cardEmparedados:hover .imagenEmparedado > img {
+    transform: scale(1.05);
+}
+
+/* ETIQUETA */
+.etiquetaEmparedado {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--noche);
+    color: var(--Marfil);
+    padding: 9px 12px;
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* BOTÓN VER */
+
+
+.verEmparedado img {
+    width: 21px;
+    height: 21px;
+}
+
+.verEmparedado:hover {
+    background: var(--Naranja);
+}
+
+/* CONTENIDO */
+.contenidoEmparedado {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* ENCABEZADO */
+.encabezadoEmparedado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.numeroEmparedado {
+    font-family: var(--fuenteTexto);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+
+/* TÍTULO */
+.contenidoEmparedado h3 {
+    font-family: var(--fuenteTitulos);
+    font-size: 25px;
+    color: var(--noche);
+    margin: 0 0 12px;
+}
+
+/* DESCRIPCIÓN */
+.descripcionEmparedado {
+    font-family: var(--fuenteTexto);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--noche);
+    opacity: 0.8;
+    margin: 0 0 20px;
+}
+
+/* INGREDIENTES */
+.ingredientesEmparedado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.ingredientesEmparedado span {
+    border: 1px solid var(--azul);
+    color: var(--noche);
+    padding: 7px 10px;
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+.ingredientesEmparedado span:hover{
+    background-color: var(--azul);
+    color: var(--botonPrincipalTexto);
+    cursor: pointer;
+}
+/* PIE DE TARJETA */
+.pieEmparedado {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(32, 42, 44, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.precioEmparedado span {
+    display: block;
+    font-family: var(--fuenteTexto);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--azul);
+    margin-bottom: 6px;
+}
+
+.precioEmparedado p {
+    font-family: var(--fuenteTitulos);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--noche);
+    margin: 0;
+}
+
+/* BOTÓN EXPLORAR */
+.btnEmparedado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 20px;
+    border-radius: 100%;
+    color: var(--noche);
+    text-decoration: none;
+    font-family: var(--fuenteTexto);
+    font-size: 13px;
+    background-color: var(--blanco);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.btnEmparedado img {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btnEmparedado:hover {
+    background: var(--noche);
+    color: var(--Marfil);
+}
+
+
