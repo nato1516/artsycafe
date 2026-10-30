@@ -1,5 +1,6 @@
 /*GENERAL*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +8,9 @@
     list-style: none;
     text-decoration: none;
     transition: 0.5s ease-in-out;
+    scroll-behavior: smooth;
 }
+
 :root {
     /* TIPOGRAFÍAS */
     --fuenteTitulos: "DM Sans";
@@ -70,14 +73,17 @@
     --advertencia: #D9A441;
     --error: #C44545;
 }
+
 .container {
     width: 90%;
     margin: 0 auto;
 }
+
 section {
     padding: 40px 0;
     min-height: 100vh;
 }
+
 /*
 ===========================================================================
 Separador
@@ -122,36 +128,43 @@ h1 {
     color: var(--azul);
     max-width: 980px;
 }
+
 h2 {
     font-family: var(--fuenteTitulos);
     font-size: 50px;
     color: var(--azul);
     max-width: 980px;
 }
+
 h3 {
     font-family: var(--fuenteTitulos);
     font-size: 30px;
     color: var(--botonOutline);
 }
-h4{
+
+h4 {
     font-family: var(--fuenteTitulos);
 }
+
 .infoContacto h3,
 .infoContacto h4 {
     color: var(--blanco);
 }
+
 .pOscuro {
     font-family: var(--fuenteTexto);
     font-size: 18px;
     color: var(--textoPrincipal);
     padding: 5px 0;
 }
-.pClaro{
+
+.pClaro {
     font-family: var(--fuenteTexto);
     font-size: 16px;
     color: var(--textoEnBoton);
     padding: 5px 0;
 }
+
 .frase {
     font-family: var(--fuenteFrases), serif;
     font-size: 25px;
@@ -160,6 +173,7 @@ h4{
     line-height: 1.3;
     color: var(--Naranja);
 }
+
 .etiqueta {
     display: inline-block;
     color: var(--navHover);
@@ -171,15 +185,18 @@ h4{
     padding-bottom: 8px;
     border-bottom: 2px solid var(--navHover);
 }
+
 .navDirec {
     font-family: var(--fuenteTexto);
     font-size: 18px;
     color: var(--Marfil);
 }
+
 .navDirec:hover {
     color: var(--Naranja);
     font-weight: bold;
 }
+
 /*
 ===========================================================================
 Botones
@@ -209,11 +226,13 @@ Botones
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
+
 .btnContact:hover {
     background-color: var(--Naranja);
     color: #17131A;
     border-color: var(--Naranja);
 }
+
 /*Banner*/
 .btnHeader {
     border-radius: 5px;
@@ -232,12 +251,14 @@ Botones
     line-height: normal;
     font-weight: 700;
 }
+
 .btnHeader:hover {
     border-radius: 5px;
     border: 1px solid var(--rosaEmpolvado);
     background: var(--navHover);
     color: var(--Marfil);
 }
+
 /*NOSOTROS*/
 .btnNosotros {
     color: var(--Naranja);
@@ -260,6 +281,7 @@ Botones
     transition: color 0.4s ease;
     z-index: 1;
 }
+
 .btnNosotros::before {
     content: "";
     position: absolute;
@@ -270,17 +292,28 @@ Botones
     transition: transform 0.4s ease;
     z-index: -1;
 }
+
 .btnNosotros:hover::before {
     transform: scaleX(1);
 }
+
 .btnNosotros:hover {
     color: var(--noche);
 }
+
 /*
 ========================================================
 NAV
 ========================================================
 */
+.close {
+    display: none;
+}
+
+.menuToggle {
+    display: none;
+}
+
 nav {
     padding: 15px 0;
     background: var(--navback);
@@ -294,6 +327,7 @@ nav {
     left: 0;
     width: 100%;
 }
+
 .containerNav {
     display: flex;
     width: 90%;
@@ -301,15 +335,18 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo img {
     width: 100px;
 }
+
 .navLink {
     display: flex;
     justify-content: space-between;
     gap: 25px;
     align-items: center;
 }
+
 /*
 ========================================================
 HEADER
@@ -328,6 +365,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .containerHeader {
     display: flex;
     flex-direction: column;
@@ -336,6 +374,7 @@ header {
     width: 90%;
     margin: 0 auto;
 }
+
 .containerHeader p {
     font-family: var(--fuenteTexto);
     font-size: 18px;
@@ -343,11 +382,13 @@ header {
     max-width: 900px;
     padding-top: 20px;
 }
+
 .botonesHeader {
     display: flex;
     gap: 30px;
     padding-top: 20px;
 }
+
 /*
 ==============================================================================================================
 Nosotros
@@ -357,34 +398,40 @@ Nosotros
     height: 100%;
     background-color: var(--Marfil);
 }
+
 .infoCaru {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     min-height: 100vh;
 }
+
 .botonesNosotros {
     display: flex;
     gap: 30px;
     padding-top: 15px;
 }
+
 .nosotros-carrusel {
     width: 85%;
     height: 600px;
     overflow: hidden;
     border-radius: 5px;
 }
+
 .carrusel-track {
     display: flex;
     flex-direction: column;
     animation: pasar-imagenes 18s infinite;
 }
+
 .carrusel-track img {
     width: 100%;
     height: 600px;
     flex-shrink: 0;
     object-fit: cover;
 }
+
 @keyframes pasar-imagenes {
 
     0%,
@@ -421,6 +468,7 @@ Nosotros
         transform: translateY(-3600px);
     }
 }
+
 /*
 =====================================================================================
 MENU
@@ -428,30 +476,35 @@ MENU
 */
 .menu {
     display: flex;
-    align-items: center;     
-    justify-content: center;  
+    align-items: center;
+    justify-content: center;
     background-color: var(--blanco);
 }
-.texroinfoProduc{
+
+.texroinfoProduc {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.texroinfoProduc .etiqueta{
+
+.texroinfoProduc .etiqueta {
     width: 200px;
     margin: 0 auto;
 }
-.texroinfoProduc h2{
+
+.texroinfoProduc h2 {
     text-align: center;
     width: 100%;
     margin: 0 auto;
 }
-.productos{
+
+.productos {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding-top: 30px;
 }
+
 .cardProductos {
     background-color: var(--Marfil);
     border: 1px solid var(--botonOutline);
@@ -465,10 +518,11 @@ MENU
     border-radius: 8px;
     text-align: center;
 
-    transition: transform 0.3s ease, 
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 .cardProductos img {
     height: 48px;
     width: 48px;
@@ -476,17 +530,21 @@ MENU
     margin: 0 auto;
     transition: transform 0.3s ease;
 }
+
 .cardProductos:hover {
     transform: translateY(-6px);
     border-color: var(--Naranja);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
 .cardProductos:hover img {
     transform: scale(1.1);
 }
-.texroinfoProduc .btnNosotros{
-    margin: 20px  auto 0;
+
+.texroinfoProduc .btnNosotros {
+    margin: 20px auto 0;
 }
+
 /*
 =================================================================================
 Productos
@@ -496,20 +554,24 @@ Productos
     background-color: var(--Marfil);
     padding: 80px 0;
 }
+
 .secProducto h2 {
     margin-bottom: 15px;
 }
+
 .secProducto .pOscuro {
     max-width: 750px;
     line-height: 1.7;
 }
+
 .productosCars {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
     padding-top: 35px;
-       justify-items: center;
+    justify-items: center;
 }
+
 .cardProducto {
     width: 100%;
     min-width: 0;
@@ -520,15 +582,18 @@ Productos
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .cardProducto:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
 }
+
 .cafe {
     width: 100%;
     height: 400px;
     overflow: hidden;
 }
+
 .cafe img {
     width: 100%;
     height: 100%;
@@ -536,9 +601,11 @@ Productos
     display: block;
     transition: transform 0.5s ease;
 }
+
 .cardProducto:hover .cafe img {
     transform: scale(1.08);
 }
+
 .precio {
     position: absolute;
     top: 15px;
@@ -552,28 +619,34 @@ Productos
     border-radius: 0 5px 5px 0;
     transition: background-color 0.3s ease;
 }
+
 .cardProducto:hover .precio {
     background-color: var(--azul);
 }
+
 .textos {
     padding: 20px;
 }
-.tituloBoton{
+
+.tituloBoton {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.botones a img{
+
+.botones a img {
     width: 23px;
 }
+
 /*
 =============================================================================
 Personal
 =============================================================================
 */
-.personal{
+.personal {
     background-color: var(--blanco);
 }
+
 .encabezadoPersonal {
     text-align: center;
     max-width: 750px;
@@ -592,7 +665,7 @@ Personal
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
-       justify-items: center;
+    justify-items: center;
 }
 
 .cardPersonal {
@@ -628,7 +701,8 @@ Personal
 .infoPersonal {
     padding: 22px;
 }
-.puesto{
+
+.puesto {
     color: var(--Naranja);
     font-family: var(--fuenteTexto);
     font-size: 14px;
@@ -639,23 +713,27 @@ Personal
     display: inline-flex;
     justify-content: center;
 }
-.infoPersonal p{
+
+.infoPersonal p {
     font-family: var(--fuenteTexto);
     font-size: 16px;
     color: var(--textoPrincipal);
     text-align: center;
 }
-.infoPersonal h3{
+
+.infoPersonal h3 {
     text-align: center;
 }
+
 /*
 ====================================================================
 Contacto
 ====================================================================
 */
-.contacto{
+.contacto {
     background-color: var(--Marfil);
 }
+
 .encabezadoContacto {
     max-width: 700px;
     margin-bottom: 40px;
@@ -685,6 +763,7 @@ Contacto
 .formularioContacto {
     background-color: var(--blanco);
 }
+
 .campo {
     display: flex;
     flex-direction: column;
@@ -737,7 +816,7 @@ Contacto
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease,
-                border-color 0.3s ease;
+        border-color 0.3s ease;
 }
 
 .btnContacto:hover {
@@ -752,7 +831,7 @@ Contacto
 
 
 
-.infoContacto > p {
+.infoContacto>p {
     line-height: 1.8;
     margin-bottom: 30px;
 }
@@ -764,7 +843,7 @@ Contacto
     margin-bottom: 25px;
 }
 
-.datoContacto > i {
+.datoContacto>i {
     font-size: 25px;
     color: var(--Naranja);
 }
@@ -800,15 +879,18 @@ Contacto
     color: var(--blanco);
     text-decoration: none;
     transition: background-color 0.3s ease,
-                color 0.3s ease;
+        color 0.3s ease;
 }
+
 .iconosRedes a i {
     font-size: 22px;
 }
+
 .iconosRedes a:hover {
     background-color: var(--Naranja);
     border-color: var(--Naranja);
 }
+
 /*
 =================================================================
 Footer
@@ -844,8 +926,8 @@ Footer
     color: var(--Naranja);
 }
 
-.marcaFooter > p,
-.horarioFooter > p {
+.marcaFooter>p,
+.horarioFooter>p {
     color: var(--Marfil);
     font-family: var(--fuenteTexto);
     font-size: 14px;
@@ -853,7 +935,7 @@ Footer
     opacity: 0.85;
 }
 
-.marcaFooter > p {
+.marcaFooter>p {
     max-width: 280px;
     margin-bottom: 22px;
 }
@@ -876,8 +958,8 @@ Footer
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease;
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .redesFooter a i {
@@ -916,7 +998,7 @@ Footer
     text-decoration: none;
     opacity: 0.8;
     transition: color 0.3s ease,
-                opacity 0.3s ease;
+        opacity 0.3s ease;
 }
 
 .enlacesFooter ul a:hover {
@@ -944,7 +1026,7 @@ Footer
 }
 
 /* Horario */
-.horarioFooter > p {
+.horarioFooter>p {
     margin: 8px 0;
 }
 
@@ -985,4 +1067,448 @@ Footer
 
 .inferiorFooter i {
     color: var(--Naranja);
+}
+
+/*
+===============================================================
+===============================================================
+===============================================================
+Media Tablet
+===============================================================
+===============================================================
+===============================================================
+*/
+@media (max-width: 1100px) {
+
+    /*
+============================================================================
+Fuentes
+============================================================================
+*/
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 35PX;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .pOscuro {
+        font-size: 16px;
+    }
+
+    .pClaro {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    /*
+========================================================
+NAV
+========================================================
+*/
+    nav {
+        padding: 15px 0;
+        background: var(--navback);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid var(--navback);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .containerNav {
+        width: 95%;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .navLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--noche);
+        padding: 150px 0;
+        transform: translateX(10000px);
+    }
+
+    .close i {
+        font-size: 25px;
+        color: var(--blanco);
+        background-color: var(--Naranja);
+        padding: 10px;
+        border-radius: 100%;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .menuToggle i {
+        font-size: 30px;
+        color: var(--Naranja);
+    }
+
+    .activo {
+        display: block;
+    }
+
+    .navLink.activo {
+        transform: translateX(0);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navLink.activo .close {
+        display: block;
+    }
+
+    .navLink.activo .navItem {
+        padding: 20px 0;
+    }
+
+    .btnContact {
+        margin: 0 auto;
+    }
+
+    /*
+    ========================================================
+    HEADER
+    ========================================================
+    */
+    header {
+        background:
+            linear-gradient(to left,
+                transparent 0%,
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0.5) 100%),
+            url("../img/fondo.jpg");
+        width: 100%;
+        height: 100vh;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .containerHeader p {
+        text-align: center;
+    }
+
+    .botonesHeader {
+        display: flex;
+        gap: 30px;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    .containerHeader {
+        width: 95%;
+    }
+
+    /*NOSOTROS*/
+    .infoCaru {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .nosotros-carrusel {
+        width: 1800px;
+        height: 600px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 1024px) {
+
+    .contenidoFooter {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    .marcaFooter {
+        grid-column: span 2;
+    }
+
+    .marcaFooter > p {
+        max-width: 450px;
+    }
+
+}
+@media (max-width: 990px) {
+
+    /*
+============================================================================
+Fuentes
+============================================================================
+*/
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 35PX;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .pOscuro {
+        font-size: 16px;
+    }
+
+    .pClaro {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    /*NOSOTROS*/
+    .infoCaru {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .nosotros-carrusel {
+        width: 90%;
+        margin: 0 auto;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .Nosotros .textos {
+        text-align: center;
+    }
+
+    .botonesNosotros {
+        margin: 0 auto;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .productosCars {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        padding-top: 35px;
+        justify-items: center;
+    }
+
+    .secProducto h2 {
+        text-align: center;
+    }
+
+    .secProducto .pOscuro {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .secProducto .etiqueta {
+        text-align: center;
+        margin: 0 auto;
+        width: 200px;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .secProducto .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gridPersonal {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+}
+@media (max-width: 800px) {
+
+    .footer {
+        padding: 45px 0 20px;
+    }
+
+    .contenidoFooter {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 30px;
+    }
+
+    .marcaFooter {
+        grid-column: span 1;
+    }
+
+    .marcaFooter > p {
+        max-width: 100%;
+    }
+
+    .enlacesFooter h3,
+    .horarioFooter h3 {
+        margin-bottom: 15px;
+    }
+
+    .inferiorFooter {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+}
+@media (max-width: 770px) {
+
+    /*
+============================================================================
+Fuentes
+============================================================================
+*/
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 25PX;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .pOscuro {
+        font-size: 16px;
+    }
+
+    .pClaro {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .containerHeader p {
+        font-size: 16px;
+    }
+
+    .botonesHeader {
+        flex-direction: column;
+    }
+
+    /*NOSOTROS*/
+    .nosotros-carrusel {
+        width: 90%;
+        margin: 0 auto;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .productosCars {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        padding-top: 35px;
+    }
+
+    .gridPersonal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-evenly;
+    }
+
+    .cardPersonal {
+        width: 90%;
+    }
+
+    .formularioContacto {
+        width: 100%;
+    }
+
+    .contenidoContacto {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .encabezadoContacto {
+        text-align: center;
+        width: 100%;
+    }
+
+
+
+
+    .contenidoFooter {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr ;
+        gap: 40px;
+        padding-bottom: 45px;
+    }
+    .inferiorFooter{
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

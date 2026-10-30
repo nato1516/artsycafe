@@ -7,6 +7,7 @@
     list-style: none;
     text-decoration: none;
     transition: 0.5s ease-in-out;
+    scroll-behavior: smooth;
 }
 :root {
     /* TIPOGRAFÍAS */
@@ -92,6 +93,34 @@ section {
     height: 100%;
 }
 
+.separadorOndas2 {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--Marfil);
+}
+
+.separadorOndas2 svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ondasFooter {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -1px;
+    background-color: var(--Marfil);
+}
+
+.ondasFooter svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 /*
 ============================================================================
 Fuentes
@@ -109,6 +138,8 @@ h2 {
     font-size: 50px;
     color: var(--azul);
     max-width: 980px;
+    text-align: center;
+    margin: 0 auto 20px;
 }
 h3 {
     font-family: var(--fuenteTitulos);
@@ -117,6 +148,10 @@ h3 {
 }
 h4{
     font-family: var(--fuenteTitulos);
+}
+.PH2{
+    text-align: center;
+    margin-bottom: 30px;
 }
 .pOscuro {
     font-family: var(--fuenteTexto);
@@ -163,6 +198,11 @@ h4{
 BOTONES
 ========================================================
 */
+.btnBanner{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
 .btnMenu {
     color: var(--dorado);
     border: 2px solid var(--dorado);
@@ -199,6 +239,81 @@ BOTONES
     transform: scaleX(1);
 }
 .btnMenu:hover {
+    color: var(--noche);
+}
+.tab {
+    color: var(--Naranja);
+    border: 2px solid var(--Naranja);
+    border-radius: 5px;
+    display: flex;
+    width: 176px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    font-family: var(--fuenteTexto);
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+.tab::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--Naranja);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+.tab:hover::before {
+    transform: scaleX(1);
+}
+.tab:hover {
+    color: var(--noche);
+}
+.tabs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 0 auto 50px;
+}
+
+/* Ocultar todas las categorías */
+.cardsCafe.panelBebidas {
+    display: none;
+}
+
+/* Mostrar únicamente la categoría seleccionada */
+.cardsCafe.panelBebidas.activo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Tab seleccionado */
+.tab.activo::before {
+    transform: scaleX(1);
+}
+
+.tab.activo {
+    color: var(--noche);
+}
+
+/* Mantener el efecto al pasar el cursor */
+.tab:hover::before {
+    transform: scaleX(1);
+}
+
+.tab:hover {
     color: var(--noche);
 }
 
@@ -267,12 +382,6 @@ CAFE
 */
 .bebidasCalientesSection{
     background-color: var(--Marfil);
-}
-.cardsCafe{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 50px;
 }
 .cardCafes {
     width: 100%;
@@ -426,6 +535,76 @@ CAFE
     font-size: 11px;
     font-weight: 700;
 }
+
+/* Ventana modal */
+.modalIngredientes {
+    position: fixed;
+    inset: 0;
+    background: rgba(32, 42, 44, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modalIngredientes.activo {
+    display: flex;
+}
+
+/* Contenido */
+.contenidoModal {
+    position: relative;
+    background: var(--Marfil);
+    color: var(--noche);
+    width: 100%;
+    max-width: 550px;
+    padding: 35px;
+    gap: 20px;
+    border-radius: 8px;
+}
+#contenidoIngredientes{
+    display: flex;
+}
+#contenidoIngredientes img{
+    width: 200px;
+    padding-right: 15px;
+    object-fit: cover;
+}
+.contenidoModal p {
+    font-family: var(--fuenteTexto);
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    color: var(--Naranja);
+    font-weight: bold;
+}
+.contenidoModal li {
+    font-family: var(--fuenteTexto);
+    margin-bottom: 12px;
+}
+.contenidoModal .desc{
+    color: var(--noche);
+    font-size: 15px;
+    font-weight: normal;
+}
+/* Botón cerrar */
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: var(--blanco);
+    font-size: 25px;
+    cursor: pointer;
+    background-color: var(--botonPrincipalHover);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+
 /*
 ========================================
 Emparedados
@@ -611,5 +790,360 @@ Emparedados
     background: var(--noche);
     color: var(--Marfil);
 }
+/*POSTRES*/
+.postres{
+    background-color: var(--Marfil);
+}
+.postresC{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+.cardPostre {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--noche);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
 
+.cardPostre:hover {
+    transform: translateY(-6px);
+}
 
+.imagenPos {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+}
+
+.imagenPos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.cardPostre:hover .imagenPos img {
+    transform: scale(1.04);
+}
+
+.textosPos {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 22px;
+    background-color: var(--noche);
+    color: var(--Marfil);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.textosPos h3 {
+    margin: 0;
+    font-family: var(--fuenteTitulos);
+    font-size: 22px;
+    color: var(--Marfil);
+}
+
+.precioVer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid var(--gris);
+}
+
+.precio {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.precio span {
+    color: var(--arena);
+    font-size: 13px;
+}
+
+.precio .total {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Marfil);
+}
+
+.btnPostre {
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    background-color: var(--Naranja);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.btnPostre img {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
+
+.btnPostre:hover {
+    background-color: var(--azul);
+}
+/* Ventana modal */
+.modalIngredientesP {
+    position: fixed;
+    inset: 0;
+    background: rgba(32, 42, 44, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modalIngredientesP.activo {
+    display: flex;
+}
+
+.contenidoModalP {
+    position: relative;
+    display: block;
+    background: var(--Marfil);
+    color: var(--noche);
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+#contenidoIngredientesP {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    align-items: center;
+}
+
+#contenidoIngredientesP img {
+    display: block;
+    width: 300px;
+    height: 320px;
+    object-fit: cover;
+}
+
+#contenidoIngredientesP .texto {
+    flex: 1;
+}
+
+#contenidoIngredientesP h3 {
+    color: var(--noche);
+    font-size: 25px;
+}
+#contenidoIngredientesP .texto ul li{
+    font-family: var(--fuenteTexto);
+}
+#contenidoIngredientesP .texto .tituloIngredientes{
+    font-family: var(--fuenteTexto);
+    font-weight: bold;
+    color: var(--Naranja);
+}
+#contenidoIngredientesP .texto .desc{
+    font-family: var(--fuenteTexto);
+    color: var(--noche);
+}
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+/*
+=================================================================
+Footer
+================================================================
+*/
+
+.footer {
+    background-color: var(--botonPrincipalHover);
+    color: var(--Marfil);
+    padding: 65px 0 20px;
+}
+
+/* Contenido principal */
+.contenidoFooter {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 45px;
+}
+
+/* Marca */
+.logoFooter {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logoFooter span {
+    color: var(--Naranja);
+}
+
+.marcaFooter > p,
+.horarioFooter > p {
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.marcaFooter > p {
+    max-width: 280px;
+    margin-bottom: 22px;
+}
+
+/* Redes sociales */
+.redesFooter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.redesFooter a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Marfil);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.redesFooter a i {
+    font-size: 21px;
+}
+
+.redesFooter a:hover {
+    background-color: var(--Naranja);
+    border-color: var(--Naranja);
+    color: var(--blanco);
+}
+
+/* Títulos */
+.enlacesFooter h3,
+.horarioFooter h3 {
+    margin: 5px 0 22px;
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 17px;
+}
+
+/* Enlaces */
+.enlacesFooter ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.enlacesFooter ul a {
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.3s ease,
+                opacity 0.3s ease;
+}
+
+.enlacesFooter ul a:hover {
+    color: var(--Naranja);
+    opacity: 1;
+}
+
+/* Datos de contacto */
+.contactoFooter li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.contactoFooter li i {
+    margin-top: 2px;
+    color: var(--Naranja);
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+/* Horario */
+.horarioFooter > p {
+    margin: 8px 0;
+}
+
+.horarioEtiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 10px;
+    color: var(--Naranja);
+    font-family: var(--fuenteTexto);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.horarioEtiqueta i {
+    font-size: 19px;
+}
+
+/* Línea inferior */
+.inferiorFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.inferiorFooter p {
+    margin: 0;
+    color: var(--Marfil);
+    font-family: var(--fuenteTexto);
+    font-size: 12px;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+.inferiorFooter i {
+    color: var(--Naranja);
+}
