@@ -1,5 +1,6 @@
 /*GENERAL*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +10,7 @@
     transition: 0.5s ease-in-out;
     scroll-behavior: smooth;
 }
+
 :root {
     /* TIPOGRAFÍAS */
     --fuenteTitulos: "DM Sans";
@@ -71,10 +73,12 @@
     --advertencia: #D9A441;
     --error: #C44545;
 }
+
 .container {
     width: 90%;
     margin: 0 auto;
 }
+
 section {
     padding: 40px 0;
     min-height: 100vh;
@@ -121,6 +125,7 @@ section {
     width: 100%;
     height: 100%;
 }
+
 /*
 ============================================================================
 Fuentes
@@ -133,6 +138,7 @@ h1 {
     max-width: 980px;
     margin: 0 auto;
 }
+
 h2 {
     font-family: var(--fuenteTitulos);
     font-size: 50px;
@@ -141,30 +147,36 @@ h2 {
     text-align: center;
     margin: 0 auto 20px;
 }
+
 h3 {
     font-family: var(--fuenteTitulos);
     font-size: 30px;
     color: var(--botonOutline);
 }
-h4{
+
+h4 {
     font-family: var(--fuenteTitulos);
 }
-.PH2{
+
+.PH2 {
     text-align: center;
     margin-bottom: 30px;
 }
+
 .pOscuro {
     font-family: var(--fuenteTexto);
     font-size: 18px;
     color: var(--textoPrincipal);
     padding: 5px 0;
 }
-.pClaro{
+
+.pClaro {
     font-family: var(--fuenteTexto);
     font-size: 19px;
     color: var(--textoEnBoton);
     padding: 5px 0;
 }
+
 .frase {
     font-family: var(--fuenteFrases), serif;
     font-size: 25px;
@@ -173,6 +185,7 @@ h4{
     line-height: 1.3;
     color: var(--Naranja);
 }
+
 .etiqueta {
     display: inline-block;
     color: var(--navHover);
@@ -184,25 +197,29 @@ h4{
     padding-bottom: 8px;
     border-bottom: 2px solid var(--navHover);
 }
+
 .navDirec {
     font-family: var(--fuenteTexto);
     font-size: 18px;
     color: var(--Marfil);
 }
+
 .navDirec:hover {
     color: var(--Naranja);
     font-weight: bold;
 }
+
 /*
 ========================================================
 BOTONES
 ========================================================
 */
-.btnBanner{
+.btnBanner {
     display: flex;
     width: 60%;
     margin: 0 auto;
 }
+
 .btnMenu {
     color: var(--dorado);
     border: 2px solid var(--dorado);
@@ -225,6 +242,7 @@ BOTONES
     z-index: 1;
     margin: 30px auto 0;
 }
+
 .btnMenu::before {
     content: "";
     position: absolute;
@@ -235,12 +253,15 @@ BOTONES
     transition: transform 0.4s ease;
     z-index: -1;
 }
+
 .btnMenu:hover::before {
     transform: scaleX(1);
 }
+
 .btnMenu:hover {
     color: var(--noche);
 }
+
 .tab {
     color: var(--Naranja);
     border: 2px solid var(--Naranja);
@@ -263,6 +284,7 @@ BOTONES
     z-index: 1;
     cursor: pointer;
 }
+
 .tab::before {
     content: "";
     position: absolute;
@@ -273,13 +295,16 @@ BOTONES
     transition: transform 0.4s ease;
     z-index: -1;
 }
+
 .tab:hover::before {
     transform: scaleX(1);
 }
+
 .tab:hover {
     color: var(--noche);
 }
-.tabs{
+
+.tabs {
     display: flex;
     justify-content: space-evenly;
     width: 70%;
@@ -335,6 +360,7 @@ nav {
     left: 0;
     width: 100%;
 }
+
 .containerNav {
     display: flex;
     width: 90%;
@@ -342,31 +368,43 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo img {
     width: 100px;
 }
+
 .navLink {
     display: flex;
     justify-content: space-between;
     gap: 25px;
     align-items: center;
 }
+
+.close {
+    display: none;
+}
+
+.menuToggle {
+    display: none;
+}
+
 /*
 ==================================================
 HEADER
 ==================================================
 */
-header{
+header {
     background:
-    linear-gradient(rgba(0, 0, 0, 0.6)),
-    url("../img/menubanner.jpg");
+        linear-gradient(rgba(0, 0, 0, 0.6)),
+        url("../img/menubanner.jpg");
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.containerHeader{
+
+.containerHeader {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -375,14 +413,16 @@ header{
     height: 100%;
     text-align: center;
 }
+
 /*
 ========================================
 CAFE
 ========================================
 */
-.bebidasCalientesSection{
+.bebidasCalientesSection {
     background-color: var(--Marfil);
 }
+
 .cardCafes {
     width: 100%;
     max-width: 380px;
@@ -407,7 +447,7 @@ CAFE
     background: var(--arena);
 }
 
-.cardCafes .imagen > img {
+.cardCafes .imagen>img {
     width: 100%;
     height: 100%;
     display: block;
@@ -415,7 +455,7 @@ CAFE
     transition: transform 0.6s ease;
 }
 
-.cardCafes:hover .imagen > img {
+.cardCafes:hover .imagen>img {
     transform: scale(1.06);
 }
 
@@ -563,14 +603,17 @@ CAFE
     gap: 20px;
     border-radius: 8px;
 }
-#contenidoIngredientes{
+
+#contenidoIngredientes {
     display: flex;
 }
-#contenidoIngredientes img{
+
+#contenidoIngredientes img {
     width: 200px;
     padding-right: 15px;
     object-fit: cover;
 }
+
 .contenidoModal p {
     font-family: var(--fuenteTexto);
     margin-bottom: 20px;
@@ -579,15 +622,18 @@ CAFE
     color: var(--Naranja);
     font-weight: bold;
 }
+
 .contenidoModal li {
     font-family: var(--fuenteTexto);
     margin-bottom: 12px;
 }
-.contenidoModal .desc{
+
+.contenidoModal .desc {
     color: var(--noche);
     font-size: 15px;
     font-weight: normal;
 }
+
 /* Botón cerrar */
 .cerrarModal {
     position: absolute;
@@ -610,11 +656,12 @@ CAFE
 Emparedados
 ========================================
 */
-.emparedadoG{
+.emparedadoG {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 /* TARJETA DE EMPAREDADOS */
 .cardEmparedados {
     background: var(--Marfil);
@@ -633,7 +680,7 @@ Emparedados
     overflow: hidden;
 }
 
-.imagenEmparedado > img {
+.imagenEmparedado>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -641,7 +688,7 @@ Emparedados
     transition: transform 0.5s ease;
 }
 
-.cardEmparedados:hover .imagenEmparedado > img {
+.cardEmparedados:hover .imagenEmparedado>img {
     transform: scale(1.05);
 }
 
@@ -730,11 +777,13 @@ Emparedados
     font-size: 10px;
     letter-spacing: 1px;
 }
-.ingredientesEmparedado span:hover{
+
+.ingredientesEmparedado span:hover {
     background-color: var(--azul);
     color: var(--botonPrincipalTexto);
     cursor: pointer;
 }
+
 /* PIE DE TARJETA */
 .pieEmparedado {
     margin-top: auto;
@@ -790,16 +839,19 @@ Emparedados
     background: var(--noche);
     color: var(--Marfil);
 }
+
 /*POSTRES*/
-.postres{
+.postres {
     background-color: var(--Marfil);
 }
-.postresC{
+
+.postresC {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: space-between;
 }
+
 .cardPostre {
     width: 100%;
     max-width: 350px;
@@ -901,6 +953,7 @@ Emparedados
 .btnPostre:hover {
     background-color: var(--azul);
 }
+
 /* Ventana modal */
 .modalIngredientesP {
     position: fixed;
@@ -952,24 +1005,29 @@ Emparedados
     color: var(--noche);
     font-size: 25px;
 }
-#contenidoIngredientesP .texto ul li{
+
+#contenidoIngredientesP .texto ul li {
     font-family: var(--fuenteTexto);
 }
-#contenidoIngredientesP .texto .tituloIngredientes{
+
+#contenidoIngredientesP .texto .tituloIngredientes {
     font-family: var(--fuenteTexto);
     font-weight: bold;
     color: var(--Naranja);
 }
-#contenidoIngredientesP .texto .desc{
+
+#contenidoIngredientesP .texto .desc {
     font-family: var(--fuenteTexto);
     color: var(--noche);
 }
+
 .cerrarModal {
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 2;
 }
+
 /*
 =================================================================
 Footer
@@ -1005,8 +1063,8 @@ Footer
     color: var(--Naranja);
 }
 
-.marcaFooter > p,
-.horarioFooter > p {
+.marcaFooter>p,
+.horarioFooter>p {
     color: var(--Marfil);
     font-family: var(--fuenteTexto);
     font-size: 14px;
@@ -1014,7 +1072,7 @@ Footer
     opacity: 0.85;
 }
 
-.marcaFooter > p {
+.marcaFooter>p {
     max-width: 280px;
     margin-bottom: 22px;
 }
@@ -1037,8 +1095,8 @@ Footer
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease;
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .redesFooter a i {
@@ -1077,7 +1135,7 @@ Footer
     text-decoration: none;
     opacity: 0.8;
     transition: color 0.3s ease,
-                opacity 0.3s ease;
+        opacity 0.3s ease;
 }
 
 .enlacesFooter ul a:hover {
@@ -1105,7 +1163,7 @@ Footer
 }
 
 /* Horario */
-.horarioFooter > p {
+.horarioFooter>p {
     margin: 8px 0;
 }
 
@@ -1146,4 +1204,312 @@ Footer
 
 .inferiorFooter i {
     color: var(--Naranja);
+}
+
+@media (max-width: 1024px) {
+
+    .contenidoFooter {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    .marcaFooter {
+        grid-column: span 2;
+    }
+
+    .marcaFooter>p {
+        max-width: 450px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    /*
+============================================================================
+Fuentes
+============================================================================
+*/
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 35PX;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .pOscuro {
+        font-size: 16px;
+    }
+
+    .pClaro {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    /*
+========================================================
+NAV
+========================================================
+*/
+    nav {
+        padding: 15px 0;
+        background: var(--navback);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid var(--navback);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .containerNav {
+        width: 95%;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .navLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        position: absolute;
+        width: 60%;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--noche);
+        padding: 150px 0;
+        transform: translateX(10000px);
+    }
+
+    .close i {
+        font-size: 25px;
+        color: var(--blanco);
+        background-color: var(--Naranja);
+        padding: 10px;
+        border-radius: 100%;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .menuToggle i {
+        font-size: 30px;
+        color: var(--Naranja);
+    }
+
+    .activo {
+        display: block;
+    }
+
+    .navLink.activo {
+        transform: translateX(0);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navLink.activo .close {
+        display: block;
+    }
+
+    .navLink.activo .navItem {
+        padding: 20px 0;
+    }
+
+    .tabs {
+        width: 100%;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .emparedadoG {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 25PX;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .textosCard h3 {
+        font-size: 20px;
+    }
+
+    .textosPos h3 {
+        font-size: 20px;
+    }
+
+    #contenidoIngredientesP h3 {
+        color: var(--noche);
+        font-size: 20px;
+    }
+
+    #contenidoIngredientesP {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    #contenidoIngredientes {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .contenidoEmparedado h3 {
+        font-size: 20px;
+    }
+
+    .btnBanner {
+        width: 100%;
+    }
+
+    .pOscuro {
+        font-size: 16px;
+    }
+
+    .pClaro {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        min-height: auto;
+        padding: 40px 0;
+    }
+
+    .footer {
+        padding: 45px 0 20px;
+    }
+
+    .contenidoFooter {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 30px;
+    }
+
+    .marcaFooter {
+        grid-column: span 1;
+    }
+
+    .marcaFooter>p {
+        max-width: 100%;
+    }
+
+    .enlacesFooter h3,
+    .horarioFooter h3 {
+        margin-bottom: 15px;
+    }
+
+    .inferiorFooter {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .cardsCafe.panelBebidas.activo {
+        justify-content: space-evenly;
+    }
+
+    .cardCafes {
+        width: 100%;
+        max-width: 480px;
+    }
+    #contenidoIngredientes img {
+        width: 100%;
+        padding-right: 0px;
+        object-fit: cover;
+    }
+    #contenidoIngredientes .texto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .postresC {
+        justify-content: space-evenly;
+    }
+
+    .cardPostre {
+        width: 100%;
+        max-width: 450px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .emparedadoG {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    .cardEmparedados {
+        height: 100%;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    
+
+    
+
+}
+
+@media (max-width: 520px) {
+
+    #contenidoIngredientesP .texto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+
 }

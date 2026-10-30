@@ -27,6 +27,11 @@
                     <div class="close">
                         <i class='bx bx-x'></i>
                     </div>
+                    <button class="abrirCarrito" id="abrirCarrito">
+                        <img src="img/svg/at-icons_shopping-bag.svg" alt="Carrito">
+
+                        <span id="cantidadCarrito">0</span>
+                    </button>
                 </ul>
                 <div class="menuToggle">
                     <i class='bx bx-menu'></i>
@@ -193,8 +198,15 @@
                             <div class="tituloBoton">
                                 <h3>Tierra Café</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="0">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -212,8 +224,15 @@
                             <div class="tituloBoton">
                                 <h3>Eco Brew</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="1">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -231,8 +250,15 @@
                             <div class="tituloBoton">
                                 <h3>Montaña Oro</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="2">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -250,8 +276,15 @@
                             <div class="tituloBoton">
                                 <h3>Kive Blend</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="3">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -269,8 +302,15 @@
                             <div class="tituloBoton">
                                 <h3>Costa Café</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="4">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -288,14 +328,105 @@
                             <div class="tituloBoton">
                                 <h3>Finca El Puente</h3>
                                 <div class="botones">
-                                    <a href=""><img src="img/svg/carbon_view.svg" alt=""></a>
-                                    <a href=""><img src="img/svg/at-icons_shopping-bag.svg" alt=""></a>
+
+                                    <a href="#" class="verProducto" aria-label="Ver producto">
+                                        <img src="img/svg/carbon_view.svg" alt="">
+                                    </a>
+
+                                    <a href="#" class="comprarProducto" aria-label="Comprar producto" data-id="5">
+                                        <img src="img/svg/at-icons_shopping-bag.svg" alt="">
+                                    </a>
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
+                <!-- MODAL PRODUCTOS -->
+                <div class="modalProducto" id="modalProducto">
+
+                    <div class="contenidoModal">
+
+                        <!-- Botón cerrar -->
+                        <button class="cerrarModal" id="cerrarModal">
+                            &times;
+                        </button>
+
+                        <!-- Imagen -->
+                        <div class="imagenModal">
+                            <img src="" alt="" id="imagenModal">
+                        </div>
+
+                        <!-- Información -->
+                        <div class="informacionModal">
+
+                            <span class="categoriaModal">COFFEE COLLECTION</span>
+
+                            <h2 id="nombreModal"></h2>
+
+                            <p class="precioModal" id="precioModal"></p>
+
+                            <p id="descripcionModal"></p>
+
+                            <div class="detallesModal">
+                                <h4>Detalles del producto</h4>
+                                <p id="detallesModal"></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- CARRITO DE COMPRAS -->
+
+                <div class="carritoFondo" id="carritoFondo"></div>
+
+                <aside class="carrito" id="carrito">
+
+                    <div class="encabezadoCarrito">
+                        <div>
+                            <span>ARTSY CAFE</span>
+                            <h2>Mi carrito</h2>
+                        </div>
+
+                        <button class="cerrarCarrito" id="cerrarCarrito">
+                            &times;
+                        </button>
+                    </div>
+
+                    <!-- Productos -->
+                    <div class="productosCarrito" id="productosCarrito">
+
+                        <!-- Aquí se agregan los productos con JavaScript -->
+
+                    </div>
+
+                    <!-- Total -->
+                    <div class="resumenCarrito">
+
+                        <div class="subtotalCarrito">
+                            <span>Subtotal</span>
+                            <p id="subtotalCarrito">₡0</p>
+                        </div>
+
+                        <div class="totalCarrito">
+                            <span>Total</span>
+                            <p id="totalCarrito">₡0</p>
+                        </div>
+
+                        <button class="btnFinalizar" id="btnFinalizar">
+                            Finalizar compra
+                        </button>
+
+                        <button class="btnSeguirComprando" id="btnSeguirComprando">
+                            Seguir comprando
+                        </button>
+
+                    </div>
+
+                </aside>
             </article>
         </section>
         <div class="separadorOndas">
@@ -606,6 +737,7 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/cafe.js"></script>
 </body>
 
 </html>
