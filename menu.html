@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú de Café y Repostería | Artsy Café</title>
     <link rel="stylesheet" href="css/menu.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
+    <header id="inicio">
         <nav>
             <article class="containerNav">
                 <div class="logo">
@@ -18,11 +19,9 @@
                 </div>
                 <ul class="navLink">
                     <li class="navItem"><a href="#" class="navDirec">Inicio</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Nosotros</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Menu</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Productos</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Personal</a></li>
-                    <li class="navItem"><a href="#" class="navDirec btnContact">Contacto</a></li>
+                    <li class="navItem"><a href="#bebidas" class="navDirec">Bebidas</a></li>
+                    <li class="navItem"><a href="#comidas" class="navDirec">Emparedados</a></li>
+                    <li class="navItem"><a href="#postres" class="navDirec">Postres</a></li>
                 </ul>
             </article>
         </nav>
@@ -33,19 +32,67 @@
                 Desde el aroma de un buen café hasta el sabor de algo recién horneado.
                 Explorá nuestro menú y encontrá tu próximo favorito en Artsy Café.
             </p>
-
-            <a href="#menu" class="btnMenu">Explorar menú</a>
+            <div class="btnBanner">
+                <a href="#menu" class="btnMenu">Explorar menú</a>
+                <a href="index.html" class="btnMenu">Regresar</a>
+            </div>
+            
         </div>
     </header>
     <main>
-        <section class="bebidasCalientesSection">
+        <section class="bebidasCalientesSection" id="bebidas">
             <article class="container">
-                <h2>Bebidas Calientes</h2>
-                <article class="cardsCafe" id="bebidasCalientes">
-                </article>
-            </article>
-        </section>
 
+                <h2>Bebidas</h2>
+                <p class="pOscuro PH2">
+                    Descubrí nuestra selección de bebidas artesanales, desde cafés clásicos y especiales
+                    hasta frappés cremosos, smoothies frutales y refrescantes sodas italianas.
+                    Cada preparación está pensada para acompañar tus momentos favoritos.
+                </p>
+
+                <div class="tabs">
+                    <button class="tab activo" data-target="bebidasCalientes">
+                        Calientes
+                    </button>
+
+                    <button class="tab" data-target="frappes">
+                        Frappes
+                    </button>
+
+                    <button class="tab" data-target="batidos">
+                        Batidos
+                    </button>
+
+                    <button class="tab" data-target="sodas">
+                        Sodas
+                    </button>
+
+                    <button class="tab" data-target="frias">
+                        Frías
+                    </button>
+                </div>
+
+                <article class="cardsCafe panelBebidas activo" id="bebidasCalientes"></article>
+                <article class="cardsCafe panelBebidas" id="frappes"></article>
+                <article class="cardsCafe panelBebidas" id="batidos"></article>
+                <article class="cardsCafe panelBebidas" id="sodas"></article>
+                <article class="cardsCafe panelBebidas" id="frias"></article>
+
+            </article>
+
+            <div class="modalIngredientes" id="modalIngredientes">
+                <div class="contenidoModal">
+                    <button type="button" class="cerrarModal" aria-label="Cerrar ingredientes">
+                        &times;
+                    </button>
+
+                    <div id="contenidoIngredientes">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <div class="separadorOndas">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path d="M0,30 C240,100 480,0 720,45
@@ -53,22 +100,129 @@
                L1440,0 L0,0 Z" fill="#FFF8EE" />
             </svg>
         </div>
-
-        <section class="emparedados">
+        <section class="emparedados" id="comidas">
             <article class="container">
+                <h2>Emparedados</h2>
                 <article class="emparedadoG" id="emparedadosId">
 
                 </article>
             </article>
         </section>
-        <div class="separadorOndas">
+
+        <div class="separadorOndas2">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
                 <path d="M0,30 C240,100 480,0 720,45
                C960,100 1200,10 1440,50
-               L1440,0 L0,0 Z" fill="#FFFFFF" />
+               L1440,0 L0,0 Z" fill="#FFF" />
+            </svg>
+        </div>
+        <section class="postres" id="postres">
+            <h2>Postres</h2>
+            <article class="container">
+                <article class="postresC" id="contPostres">
+                    
+                </article>
+                <div class="modalIngredientesP" id="modalIngredientesP">
+                        <div class="contenidoModalP">
+
+                            <button type="button" class="cerrarModal" aria-label="Cerrar ingredientes">
+                                &times;
+                            </button>
+
+                            <div id="contenidoIngredientesP"></div>
+
+                        </div>
+                    </div>
+            </article>
+        </section>
+        <div class="ondasFooter">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64 C180,120 360,10 540,48
+               C720,86 900,120 1080,60
+               C1260,0 1350,30 1440,50
+               L1440,120 L0,120 Z" fill="var(--botonPrincipalHover)" />
             </svg>
         </div>
     </main>
+     <footer class="footer">
+
+        <div class="container">
+            <div class="contenidoFooter">
+
+                <!-- Marca -->
+                <div class="marcaFooter">
+                    <a href="#" class="logoFooter"><img src="img/logo.png" alt=""></a>
+                    <p>
+                        Café de calidad, momentos especiales y sabores
+                        que conectan con lo mejor de nuestra tierra.
+                    </p>
+                    <div class="redesFooter">
+                        <a href="#" aria-label="Instagram">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <i class="bx bxl-tiktok"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="bx bxl-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navegación -->
+                <div class="enlacesFooter">
+                    <h3>Explora</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#bebidas">Bebidas</a></li>
+                        <li><a href="#comidas">Emparedados</a></li>
+                        <li><a href="#postres">Postres</a></li>
+                    </ul>
+                </div>
+
+                <!-- Información -->
+                <div class="enlacesFooter">
+                    <h3>Contáctanos</h3>
+                    <ul class="contactoFooter">
+                        <li>
+                            <i class="bx bx-map"></i>
+                            <span>Costa Rica</span>
+                        </li>
+                        <li>
+                            <i class="bx bx-phone"></i>
+                            <span>+506 87648901</span>
+                        </li>
+                        <li>
+                            <i class="bx bx-envelope"></i>
+                            <span>serviciocliente@artsycafe.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Horario -->
+                <div class="horarioFooter">
+                    <h3>Visítanos</h3>
+                    <p>Ven a disfrutar de una buena taza de café y un momento para ti.</p>
+                    <span class="horarioEtiqueta">
+                        <i class="bx bx-time-five"></i>
+                        Horario de atención
+                    </span>
+                    <p>Lunes a sábado</p>
+                    <p>8:00 a. m. – 6:00 p. m.</p>
+                </div>
+
+            </div>
+
+            <!-- Parte inferior -->
+            <div class="inferiorFooter">
+                <p>© 2026 Artsy Cafe. Todos los derechos reservados.</p>
+                <p>Hecho por Natofer</p>
+            </div>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 

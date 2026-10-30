@@ -19,12 +19,18 @@
                 </div>
                 <ul class="navLink">
                     <li class="navItem"><a href="#" class="navDirec">Inicio</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Nosotros</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Menu</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Productos</a></li>
-                    <li class="navItem"><a href="#" class="navDirec">Personal</a></li>
-                    <li class="navItem"><a href="#" class="navDirec btnContact">Contacto</a></li>
+                    <li class="navItem"><a href="#nosotros" class="navDirec">Nosotros</a></li>
+                    <li class="navItem"><a href="#menu" class="navDirec">Menu</a></li>
+                    <li class="navItem"><a href="#productos" class="navDirec">Productos</a></li>
+                    <li class="navItem"><a href="#personal" class="navDirec">Personal</a></li>
+                    <li class="navItem"><a href="#contacto" class="navDirec btnContact">Contacto</a></li>
+                    <div class="close">
+                        <i class='bx bx-x'></i>
+                    </div>
                 </ul>
+                <div class="menuToggle">
+                    <i class='bx bx-menu'></i>
+                </div>
             </article>
         </nav>
         <div class="containerHeader">
@@ -32,15 +38,15 @@
             <p>El aroma del café recién preparado, el sabor de lo artesanal y la calidez de un lugar que se siente como
                 hogar. En nuestra cafetería, cada visita tiene su propio encanto.</p>
             <div class="botonesHeader">
-                <a class="btnHeader" href="">Ver menú</a>
-                <a class="btnHeader" href="">Ver productos</a>
+                <a class="btnHeader" href="#menu">Ver menú</a>
+                <a class="btnHeader" href="#productos">Ver productos</a>
             </div>
 
         </div>
 
     </header>
     <main>
-        <section class="Nosotros">
+        <section class="Nosotros" id="nosotros">
             <article class="container">
                 <div class="infoCaru">
                     <div class="nosotros-carrusel">
@@ -98,7 +104,7 @@
                L1440,0 L0,0 Z" fill="var(--Marfil)" />
             </svg>
         </div>
-        <section class="menu">
+        <section class="menu" id="menu">
             <article class="container">
                 <div class="texroinfoProduc">
                     <span class="etiqueta">NUESTROS SABORES</span>
@@ -162,7 +168,7 @@
             L1440,120 L0,120 Z" fill="var(--Marfil)" />
             </svg>
         </div>
-        <section class="secProducto">
+        <section class="secProducto" id="productos">
             <article class="container">
                 <span class="etiqueta">NUESTROS SABORES</span>
 
@@ -302,7 +308,7 @@
                L1440,0 L0,0 Z" fill="var(--Marfil)" />
             </svg>
         </div>
-        <section class="personal">
+        <section class="personal" id="personal">
             <article class="container">
                 <div class="encabezadoPersonal">
                     <span class="etiqueta">NUESTRO EQUIPO</span>
@@ -393,7 +399,7 @@
             L1440,120 L0,120 Z" fill="var(--Marfil)" />
             </svg>
         </div>
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <article class="container">
 
                 <div class="encabezadoContacto">
@@ -599,6 +605,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
